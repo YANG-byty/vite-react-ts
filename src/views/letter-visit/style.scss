@@ -1,0 +1,1123 @@
+ .letter-visit {
+   @mixin gradient() {
+     background-image: linear-gradient(180deg, #ffffff 0%, #f5fdff 28%, #4fefff 100%);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+   }
+
+   @mixin number() {
+     font-family: number;
+   }
+
+   @mixin background-style() {
+     background-repeat: no-repeat;
+     background-size: cover;
+   }
+
+   @mixin jiao() {
+     position: relative;
+
+     &::before {
+       left: 0;
+       background: url(../../assets/images/letter-visit/jiao-left-top.png) 0 0,
+         url(../../assets/images/letter-visit/jiao-left-bottom.png) 0 100%;
+     }
+
+     &::after {
+       right: 0;
+       background: url(../../assets/images/letter-visit/jiao-left-top.png) 0 0,
+         url(../../assets/images/letter-visit/jiao-left-bottom.png) 0 100%;
+       -webkit-transform: rotate(180deg);
+       transform: rotate(180deg);
+     }
+
+     &::before,
+     &::after {
+       content: '';
+       position: absolute;
+       top: 0;
+       width: 100%;
+       height: 100%;
+       background-repeat: no-repeat;
+       background-size: 7px;
+       z-index: 1;
+     }
+   }
+
+   .ant-picker {
+     .ant-picker-active-bar {
+       width: 3.1rem !important;
+       margin-left: 1rem;
+     }
+
+     .ant-picker-input>input {
+       width: 4rem;
+       text-align: center;
+
+       &::placeholder {
+         color: rgba(46, 255, 223, 0.4);
+       }
+     }
+
+     .ant-picker-input>input,
+     .ant-picker-suffix,
+     .ant-picker-separator {
+       font-size: 0.875rem;
+       font-weight: bold;
+       color: #fff;
+     }
+   }
+
+   .side-box {
+     .toptitle {
+       padding-left: 1rem;
+       height: 2.5rem;
+       line-height: 2.5rem;
+       background-image: url(../../assets/images/letter-visit/left-topbg.png);
+       background-repeat: no-repeat;
+
+       span {
+         letter-spacing: 2px;
+         font-size: 1rem;
+         font-family: type-title;
+         @include gradient();
+       }
+     }
+
+     .inner {
+       padding: 0.625rem 1rem 1rem 1rem;
+       border-image: linear-gradient(360deg, rgba(3, 125, 255, 1), rgba(25, 179, 248, 0)) 1 1;
+       border-style: solid;
+       border-width: 1px;
+       background-image: url(../../assets/images/letter-visit/left-innerbg.png);
+       background-repeat: repeat;
+     }
+   }
+
+   .mt {
+     margin-top: 1rem;
+   }
+
+   .screen-wrap {
+     background-image: url(../../assets/images/letter-visit/bodybg.jpg);
+
+     .head-bar {
+       margin-bottom: -13.75rem;
+       width: 100%;
+       height: 13.75rem;
+       line-height: 4.625rem;
+       text-align: center;
+       background-image: url(../../assets/images/letter-visit/headbg.png);
+       @include background-style();
+
+       .title {
+         @include gradient();
+         letter-spacing: 2px;
+         font-size: 2.125rem;
+         font-family: logo;
+
+         span {
+           background-image: linear-gradient(180deg, #2effdf 0%, #2effdf 28%, #2effdf 100%);
+           -webkit-background-clip: text;
+         }
+       }
+     }
+
+     .content {
+       position: relative;
+       padding: 1.25rem 32.125rem 1rem 1.25rem;
+
+       .main-side {
+         position: relative;
+         padding-left: 31rem;
+
+         .left-side {
+           position: absolute;
+           left: 0;
+           top: 0;
+           width: 29rem;
+
+           .year {
+             margin-right: 1rem;
+             width: 19.6875rem;
+             height: 2.5rem;
+             font-size: 0.875rem;
+             background-image: url(../../assets/images/letter-visit/year-bg.png);
+             background-repeat: no-repeat;
+             background-size: cover;
+
+             .all {
+               padding: 0 0.5rem;
+               color: #fff;
+               font-weight: bold;
+               cursor: pointer;
+             }
+
+             .line {
+               margin: 0 0.5rem;
+               width: 0.625rem;
+               height: 0.125rem;
+               background: #fff;
+             }
+           }
+
+           .city {
+             width: 7.9375rem;
+             height: 2.5rem;
+             line-height: 2.5rem;
+             text-align: center;
+             font-size: 1rem;
+             color: #bcf9ff;
+             background-image: url(../../assets/images/letter-visit/city-bg.png);
+             background-repeat: no-repeat;
+             background-size: cover;
+             cursor: pointer;
+
+             span {
+               padding-left: 0.25rem;
+               color: #1987ff;
+             }
+           }
+
+           .side-box {
+             .petition-number {
+               width: 100%;
+               height: 7.5rem;
+               background-image: url(../../assets/images/letter-visit/petition-bg.png);
+               @include background-style();
+
+               .icon {
+                 margin-left: 1.25rem;
+                 margin-right: 2.5rem;
+                 width: 6.25rem;
+                 height: 5.0625rem;
+                 text-align: center;
+                 background-image: url(../../assets/images/letter-visit/petition-iconbg.png);
+                 @include background-style();
+
+                 img {
+                   margin-top: 0.375rem;
+                   width: 2.5rem;
+                 }
+               }
+
+               .text {
+                 color: #2effdf;
+               }
+
+               .number {
+                 @include number();
+                 @include gradient();
+                 padding-right: 0.5rem;
+                 font-size: 2.25rem;
+               }
+             }
+
+             .petition-list {
+               margin-top: 0.5rem;
+               -webkit-flex-wrap: wrap;
+               flex-wrap: wrap;
+               height: 8.5rem;
+               overflow-y: auto;
+               margin-right: -0.6rem;
+
+               .item {
+                 cursor: pointer;
+                 @include jiao();
+                 padding-left: 0.625rem;
+                 margin-top: 0.5rem;
+                 margin-right: 0.5rem;
+                 width: 8.625rem;
+                 height: 3.5rem;
+                 background: #00034c;
+
+                 p:nth-child(1) {
+                   color: #2effdf;
+                   font-size: 0.75rem;
+
+                   .number {
+                     @include number();
+                     font-size: 1.25rem;
+                     color: #fff;
+                   }
+                 }
+
+                 p:nth-child(2) {
+                   font-size: 0.75rem;
+                   color: #b2b4c9;
+                 }
+
+                 &:nth-of-type(3n + 3) {
+                   margin-right: 0;
+                 }
+               }
+             }
+
+             .petition-total {
+               margin-top: 0.5rem;
+               height: 4.5rem;
+               line-height: 4.5rem;
+               text-align: center;
+               color: #2effdf;
+               background: #00034c;
+               @include jiao();
+
+               .number {
+                 @include number();
+                 @include gradient();
+                 padding: 0 0.5rem;
+                 font-size: 2.25rem;
+               }
+             }
+
+             .chart-box {
+               height: 16.5rem;
+             }
+
+             .capital-total {
+               margin-top: 0.5rem;
+               height: 4.5rem;
+               text-align: center;
+               color: #2effdf;
+               background: #00034c;
+               @include jiao();
+
+               .number {
+                 @include number();
+                 padding: 0 1rem;
+                 margin: 0 1rem;
+                 font-size: 2.25rem;
+                 color: #fff;
+                 border-radius: 0.25rem;
+                 background: linear-gradient(360deg, #037dff 0%, rgba(25, 179, 248, 0) 100%);
+               }
+             }
+           }
+         }
+
+         .middle-side {
+           padding-top: 4.625rem;
+
+           .total-list {
+             height: 6.125rem;
+
+             .item {
+               width: 33.33%;
+
+               .icon {
+                 margin-right: 1rem;
+                 width: 6.125rem;
+                 height: 6.125rem;
+                 background-image: url(../../assets/images/letter-visit/round-bg.png);
+                 @include background-style();
+               }
+
+               .number {
+                 @include number();
+                 @include gradient();
+                 font-size: 2.25rem;
+               }
+
+               .name {
+                 color: #2effdf;
+               }
+             }
+           }
+
+           .map-side {
+             .type {
+               .title {
+                 margin-top: 1.25rem;
+                 width: 15.1875rem;
+                 height: 2.875rem;
+                 line-height: 2.875rem;
+                 background-image: url(../../assets/images/letter-visit/map-title-bg.png);
+                 @include background-style();
+
+                 span {
+                   padding-left: 1rem;
+                   letter-spacing: 2px;
+                   font-size: 1rem;
+                   font-family: type-title;
+                   @include gradient();
+                 }
+               }
+
+               .item {
+                 padding: 0 1rem;
+                 margin-top: 1.25rem;
+                 width: 15.1875rem;
+                 height: 2.875rem;
+                 line-height: 2.875rem;
+                 font-size: 1.125rem;
+                 color: #fff;
+                 background-image: url(../../assets/images/letter-visit/map-item-bg.png);
+                 @include background-style();
+                 cursor: pointer;
+
+                 .anticon {
+                   font-size: 1.25rem;
+                   opacity: 0;
+                 }
+
+                 &.active {
+                   font-weight: bold;
+                   background-image: url(../../assets/images/letter-visit/map-item-active-bg.png);
+
+                   .anticon {
+                     opacity: 1;
+                   }
+                 }
+               }
+             }
+
+             .map-box {
+               position: relative;
+               width: 28.25rem;
+               height: 26.5rem;
+               background-image: url(../../assets/images/letter-visit/map-bg.png);
+               @include background-style();
+
+               .item {
+                 position: absolute;
+                 @include background-style();
+                 transition: all 0.1s;
+
+                 .name {
+                   position: absolute;
+                   left: 48%;
+                   top: 52%;
+                   -webkit-transform: translate(-50%, -50%);
+                   transform: translate(-50%, -50%);
+                   font-family: map-font;
+                   font-size: 0.875rem;
+                   @include gradient();
+                 }
+
+                 .more {
+                   position: absolute;
+                   top: 52%;
+                   z-index: 2;
+                   padding: 1rem;
+                   min-width: 14.75rem;
+                   border-radius: 0.25rem;
+                   border: #2effdf solid 1px;
+                   background: #00034c;
+                   -webkit-transition: opacity 0.5s linear;
+                   transition: opacity 0.5s linear;
+                   opacity: 0;
+                   visibility: hidden;
+
+                   dl {
+                     font-size: 0.75rem;
+                     line-height: 1.5rem;
+                     color: #fff;
+
+                     dt {
+                       color: #fc2465;
+                       font-weight: bold;
+                     }
+
+                     dd {
+                       &:hover {
+                         color: #fc2465;
+                       }
+                     }
+
+                     &:nth-child(2) {
+                       padding-top: 1rem;
+
+                       dt {
+                         color: #f59a23;
+                       }
+
+                       dd {
+                         &:hover {
+                           color: #f59a23;
+                         }
+                       }
+                     }
+                   }
+                 }
+
+                 &.shibenji {
+                   top: 2.2rem;
+                   left: 13rem;
+                   width: 6rem;
+                   height: 1.875rem;
+
+                   .more {
+                     top: 85%;
+                     right: 80%;
+                   }
+
+                   &.active-map {
+                     .name {
+                       font-size: 1.125rem !important;
+                       color: #fff !important;
+                     }
+                   }
+                 }
+
+                 &.suichang {
+                   left: 0;
+                   top: 2.25rem;
+                   width: 13.1875rem;
+                   height: 10.3125rem;
+
+                   .more {
+                     right: 13.1875rem;
+                   }
+
+                   &:hover {
+                     background-image: url(../../assets/images/letter-visit/suichang.png);
+                   }
+
+                   &.active-map {
+                     background-image: url(../../assets/images/letter-visit/suichang.png);
+
+                     .name {
+                       font-size: 1.125rem !important;
+                       color: #fff !important;
+                     }
+                   }
+                 }
+
+                 &.songyang {
+                   top: 5.875rem;
+                   left: 7.6875rem;
+                   width: 8.875rem;
+                   height: 6.25rem;
+
+                   .more {
+                     right: 7.6875rem;
+                   }
+
+                   &:hover {
+                     background-image: url(../../assets/images/letter-visit/songyang.png);
+                   }
+
+                   &.active-map {
+                     background-image: url(../../assets/images/letter-visit/songyang.png);
+
+                     .name {
+                       font-size: 1.125rem !important;
+                       color: #fff !important;
+                     }
+                   }
+                 }
+
+                 &.liandu {
+                   top: 3.6875rem;
+                   left: 14.875rem;
+                   width: 8.6875rem;
+                   height: 10.75rem;
+
+                   .more {
+                     top: 45%;
+                     right: 7rem;
+                   }
+
+                   .name {
+                     top: 40%;
+                   }
+
+                   &:hover {
+                     background-image: url(../../assets/images/letter-visit/liandu.png);
+                   }
+
+                   &.active-map {
+                     background-image: url(../../assets/images/letter-visit/liandu.png);
+
+                     .name {
+                       font-size: 1.125rem !important;
+                       color: #fff !important;
+                     }
+                   }
+                 }
+
+                 &.jinyun {
+                   top: 0;
+                   left: 19.125rem;
+                   width: 9.125rem;
+                   height: 9.25rem;
+
+                   .more {
+                     right: 9.125rem;
+                   }
+
+                   &:hover {
+                     background-image: url(../../assets/images/letter-visit/jinyun.png);
+                   }
+
+                   &.active-map {
+                     background-image: url(../../assets/images/letter-visit/jinyun.png);
+
+                     .name {
+                       font-size: 1.125rem !important;
+                       color: #fff !important;
+                     }
+                   }
+                 }
+
+                 &.longquan {
+                   top: 10.4375rem;
+                   left: 0.3125rem;
+                   width: 11.6875rem;
+                   height: 10.75rem;
+
+                   .more {
+                     right: 11.6875rem;
+                   }
+
+                   &:hover {
+                     background-image: url(../../assets/images/letter-visit/longquan.png);
+                   }
+
+                   &.active-map {
+                     background-image: url(../../assets/images/letter-visit/longquan.png);
+
+                     .name {
+                       font-size: 1.125rem !important;
+                       color: #fff !important;
+                     }
+                   }
+                 }
+
+                 &.yunhe {
+                   top: 10.8125rem;
+                   left: 10.625rem;
+                   width: 6.4375rem;
+                   height: 7.25rem;
+
+                   .more {
+                     top: 20%;
+                     right: 6.4375rem;
+                   }
+
+                   .name {
+                     top: 40%;
+                   }
+
+                   &:hover {
+                     background-image: url(../../assets/images/letter-visit/yunhe.png);
+                   }
+
+                   &.active-map {
+                     background-image: url(../../assets/images/letter-visit/yunhe.png);
+
+                     .name {
+                       font-size: 1.125rem !important;
+                       color: #fff !important;
+                     }
+                   }
+                 }
+
+                 &.qingtian {
+                   top: 8rem;
+                   left: 18rem;
+                   width: 10.1875rem;
+                   height: 9.4375rem;
+
+                   .more {
+                     top: 42%;
+                     right: 10.1875rem;
+                   }
+
+                   &:hover {
+                     background-image: url(../../assets/images/letter-visit/qingtian.png);
+                   }
+
+                   &.active-map {
+                     background-image: url(../../assets/images/letter-visit/qingtian.png);
+
+                     .name {
+                       font-size: 1.125rem !important;
+                       color: #fff !important;
+                     }
+                   }
+                 }
+
+                 &.qinyuan {
+                   top: 18.625rem;
+                   left: 2.25rem;
+                   width: 10.9375rem;
+                   height: 7.5625rem;
+
+                   .more {
+                     right: 10.9375rem;
+                   }
+
+                   &:hover {
+                     background-image: url(../../assets/images/letter-visit/qinyuan.png);
+                   }
+
+                   &.active-map {
+                     background-image: url(../../assets/images/letter-visit/qinyuan.png);
+
+                     .name {
+                       font-size: 1.125rem !important;
+                       color: #fff !important;
+                     }
+                   }
+                 }
+
+                 &.jinning {
+                   top: 12.9375rem;
+                   left: 8.75rem;
+                   width: 12.125rem;
+                   height: 9.25rem;
+
+                   .name {
+                     top: 60%;
+                   }
+
+                   .more {
+                     right: 12.125rem;
+                   }
+
+                   &:hover {
+                     background-image: url(../../assets/images/letter-visit/jinning.png);
+                   }
+
+                   &.active-map {
+                     background-image: url(../../assets/images/letter-visit/jinning.png);
+
+                     .name {
+                       font-size: 1.125rem !important;
+                       color: #fff !important;
+                     }
+                   }
+                 }
+
+                 &:hover {
+                   cursor: pointer;
+
+                   .name {
+                     font-size: 1.125rem;
+                     background-image: linear-gradient(180deg, #fff 0%, #fff 28%, #fff 100%);
+                     -webkit-background-clip: text;
+                     -webkit-text-fill-color: transparent;
+                   }
+
+                   .more {
+                     opacity: 1;
+                     visibility: visible;
+                   }
+                 }
+               }
+
+               #maxMap {
+                 top: 2rem;
+                 left: 0;
+                 width: 27rem;
+                 height: 22rem;
+                 background-repeat: round;
+               }
+             }
+           }
+
+           .side-box {
+             height: 215px;
+             width: 55.375rem;
+
+             .toptitle {
+               background-image: url(../../assets/images/letter-visit/middle-topbg.png);
+             }
+
+             .inner {
+               padding-bottom: 0.5rem;
+               background-image: url(../../assets/images/letter-visit/middle-innerbg.png);
+               height: 11rem;
+
+               .model-proportion {
+                 margin-top: -0.625rem;
+                 overflow-x: auto;
+
+                 .item {
+                   cursor: pointer;
+                   margin-right: 1.25rem;
+
+                   .icon {
+                     width: 5.5rem;
+                     height: 5.5rem;
+                     background-image: url(../../assets/images/letter-visit/model-bg.png);
+                     @include background-style();
+
+                     img {
+                       width: 2rem;
+                     }
+                   }
+
+                   .number {
+                     @include number();
+                     font-size: 1.75rem;
+                     color: #fff;
+                   }
+
+                   .name {
+                     font-size: 0.75rem;
+                     color: #2effdf;
+                     text-align: center;
+                     max-width: 6.25rem;
+                   }
+                 }
+               }
+             }
+           }
+         }
+       }
+
+       .bottom-side {
+         width: 86.375rem;
+
+         .side-box {
+           .toptitle {
+             background-image: url(../../assets/images/letter-visit/bottom-topbg.png);
+           }
+
+           .inner {
+             background-image: url(../../assets/images/letter-visit/bottom-innerbg.png);
+
+             .warn-type {
+               width: 27.75rem;
+
+               .item {
+                 .icon {
+                   margin-right: 1rem;
+                   width: 4rem;
+                   height: 4.375rem;
+                   @include background-style();
+
+                   img {
+                     width: 2rem;
+                   }
+                 }
+
+                 .name {
+                   color: #fff;
+                   font-weight: bold;
+                 }
+
+                 .text {
+                   color: #fff;
+                   font-size: 0.875rem;
+
+                   .number {
+                     @include number();
+                     padding-right: 0.5rem;
+                     font-size: 2rem;
+                   }
+                 }
+
+                 &.red {
+                   .icon {
+                     background-image: url(../../assets/images/letter-visit/red-warnbg.png);
+                   }
+
+                   .text {
+                     .number {
+                       color: #fc2465;
+                     }
+                   }
+                 }
+
+                 &.yellow {
+                   .icon {
+                     background-image: url(../../assets/images/letter-visit/yellow-warnbg.png);
+                   }
+
+                   .text {
+                     .number {
+                       color: #f59a23;
+                     }
+                   }
+                 }
+
+                 .progress {
+                   padding-top: 0.5rem;
+
+                   li {
+                     font-size: 0.75rem;
+                     color: #fff;
+
+                     div {
+                       margin-right: 0.25rem;
+                     }
+
+                     .label {
+                       min-width: 4.5rem;
+                       text-align: right;
+                     }
+
+                     .number {
+                       font-size: 0.875rem;
+                       font-weight: 500;
+                       @include number();
+                     }
+
+                     .progress-bg {
+                       position: relative;
+                       width: 5rem;
+                       height: 0.5rem;
+                       border-radius: 0.25rem;
+                       background: #1d2f6b;
+
+                       span {
+                         display: inline-block;
+                         position: absolute;
+                         left: 0;
+                         top: 0;
+                         height: 0.5rem;
+                         border-radius: 0.25rem;
+
+                         &.blue {
+                           background: #0075ff;
+                         }
+
+                         &.yellow {
+                           background: #f59a23;
+                         }
+
+                         &.green {
+                           background: #2effdf;
+                         }
+                       }
+                     }
+                   }
+                 }
+               }
+             }
+
+             //表格
+             .table-box {
+               margin-top: -1.5rem;
+               color: #fff;
+               text-align: left;
+               width: 54.375rem;
+
+               .thead {
+                 height: 2.25rem;
+                 line-height: 2.25rem;
+                 font-size: 0.875rem;
+                 background: rgba(0, 117, 255, 0.3);
+               }
+
+               .column {
+                 display: inline-block;
+                 padding-left: 0.5rem;
+                 vertical-align: top;
+                 white-space: nowrap;
+
+                 &.one {
+                   width: 6%;
+                   text-align: center;
+                 }
+
+                 &.two {
+                   width: 17%;
+                   text-align: center;
+                 }
+
+                 &.three {
+                   width: 12%;
+                   text-align: center;
+                 }
+
+                 &.four {
+                   width: 15%;
+                 }
+
+                 &.five {
+                   width: 50%;
+                 }
+
+                 &.six {
+                   width: 15%;
+                 }
+               }
+
+               .tbody {
+                 height: 8.1875rem;
+                 overflow-y: auto;
+
+                 .item {
+                   font-size: 0.75rem;
+                   line-height: 1.875rem;
+                   border-bottom: rgba(0, 119, 255, 0.2) solid 1px;
+
+                   &:hover {
+                     color: #2effdf;
+                   }
+
+                   .red {
+                     color: #fc2465;
+                   }
+
+                   .yellow {
+                     color: #f59a23;
+                   }
+                 }
+               }
+             }
+           }
+         }
+       }
+
+       .right-side {
+         position: absolute;
+         right: 1.25rem;
+         top: 1.25rem;
+         width: 29rem;
+
+         .time-info {
+           height: 2.5rem;
+
+           .time {
+             font-size: 2rem;
+             font-family: arial;
+             @include gradient();
+           }
+
+           .week {
+             padding-left: 1.5rem;
+             font-size: 1.25rem;
+             color: #fff;
+             letter-spacing: 2px;
+
+             span {
+               padding-left: 1rem;
+             }
+           }
+         }
+
+         //高频问题
+         .problem-list {
+           margin-top: -0.625rem;
+           -webkit-flex-wrap: wrap;
+           flex-wrap: wrap;
+           height: 10.5rem;
+           overflow-y: auto;
+           margin-right: -0.825rem;
+
+           .item {
+             cursor: pointer;
+             @include jiao();
+             position: relative;
+             padding-left: 0.625rem;
+             margin-top: 0.5rem;
+             margin-right: 0.5rem;
+             width: 8.625rem;
+             height: 4.75rem;
+             background: #00034c;
+
+             .order {
+               position: absolute;
+               right: 0.5rem;
+               top: 0.25rem;
+               color: #2effdf;
+             }
+
+             p:nth-child(1) {
+               color: #0075ff;
+               font-size: 0.75rem;
+
+               .number {
+                 padding-right: 0.25rem;
+                 font-family: number-light;
+                 font-size: 1.25rem;
+                 color: #fff;
+               }
+             }
+
+             p:nth-child(2) {
+               font-size: 0.75rem;
+               color: #2effdf;
+             }
+
+             p:nth-child(3) {
+               font-size: 0.75rem;
+               color: #b2b4c9;
+             }
+
+             &:nth-of-type(3n + 3) {
+               margin-right: 0;
+             }
+
+             &:nth-child(1) {
+               .order {
+                 color: #fc2465;
+               }
+             }
+
+             &:nth-child(2) {
+               .order {
+                 color: #f59a23;
+               }
+             }
+           }
+         }
+
+         .chart-box {
+           height: 21.25rem;
+         }
+
+         .hot-attention-wrap {
+           height: 17.2rem;
+         }
+
+         //监督成效
+         .results-list {
+           margin-top: -0.625rem;
+           -ms-flex-wrap: wrap;
+           flex-wrap: wrap;
+
+           .item {
+             @include jiao();
+             padding-left: 0.625rem;
+             margin-top: 0.625rem;
+             width: 13.125rem;
+             height: 4.75rem;
+             background: #00034c;
+
+             .icon {
+               margin-right: 1rem;
+               width: 3.75rem;
+               height: 4.125rem;
+               background-image: url(../../assets/images/letter-visit/results-itembg.png);
+               @include background-style();
+
+               img {
+                 width: 1.75rem;
+               }
+             }
+
+             .name {
+               font-size: 0.75rem;
+               color: #fff;
+             }
+
+             .text {
+               color: #0075ff;
+               font-size: 0.75rem;
+
+               .number {
+                 @include number();
+                 padding-right: 0.5rem;
+                 font-size: 1.25rem;
+               }
+             }
+
+             &.row {
+               width: 100%;
+             }
+
+             &:nth-of-type(2n + 2) {
+               margin-right: 0.625rem;
+             }
+           }
+         }
+       }
+     }
+   }
+ }

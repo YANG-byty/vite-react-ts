@@ -1,0 +1,90 @@
+@import 'antd/dist/reset.css';
+@import './basic.scss';
+@import './screen.scss';
+
+body,
+html {
+  height: 100%;
+}
+
+body {
+  font-size: 1rem;
+}
+
+.select-year {
+
+  .all,
+  .city {
+    padding: 0 1rem;
+    color: #fff;
+    font-weight: bold;
+  }
+
+  .line {
+    margin: 0 0.5rem;
+    width: 0.625rem;
+    height: 0.125rem;
+    background: #fff;
+  }
+
+  .line-y {
+    margin: 0 0.5rem;
+    width: 0.125rem;
+    height: 1rem;
+    background: #fff;
+  }
+
+  .ant-picker {
+    border: 0;
+
+    .ant-picker-active-bar {
+      width: 5.1rem !important;
+      margin-left: 1rem;
+    }
+
+    .ant-picker-input>input {
+      width: 6rem;
+      text-align: center;
+
+      &::placeholder {
+        color: #0073dd;
+      }
+    }
+
+    .ant-picker-input>input,
+    .ant-picker-suffix,
+    .ant-picker-separator {
+      font-size: 1rem;
+      font-weight: bold;
+      color: #fff;
+    }
+  }
+}
+
+.progress-bar {
+  width: 100%;
+  width: 9rem;
+  height: 1.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid #0073dd;
+}
+
+.circinate {
+  width: 7.9375rem;
+  height: 7.9375rem;
+}
+
+// header样式
+.header-box {
+  height: 4.875rem;
+  min-width: 1460px;
+  background: url(../images/bg.png);
+  border-bottom: 4px solid #00f0ff;
+  padding: 0 1.5rem;
+
+  .logo {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-right: .625rem;
+  }
+}

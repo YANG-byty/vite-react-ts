@@ -1,0 +1,95 @@
+.screen-wrap {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-width: 118.75rem;
+  min-height: 67.5rem;
+  font-size: 1rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  user-select: none;
+
+  .chart-box {
+    width: 100%;
+  }
+
+  .mt12 {
+    margin-top: 0.75rem;
+  }
+
+  .line-box {
+    width: 100%;
+    @include flex();
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-align-items: center;
+    align-items: center;
+
+    em {
+      width: calc(100% - 0.625rem);
+      display: inline-block;
+      background-color: #0073dd;
+      height: 0.0625rem;
+      opacity: 0.3;
+    }
+
+    &::after {
+      content: '';
+      display: inline-block;
+      background-color: #0073dd;
+      width: 0.3125rem;
+      height: 0.3125rem;
+    }
+
+    &::before {
+      content: '';
+      display: inline-block;
+      background-color: #0073dd;
+      width: 0.3125rem;
+      height: 0.3125rem;
+    }
+  }
+
+  .alert-box {
+    height: 2rem;
+    line-height: 1.875rem;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #fff;
+    text-align: center;
+    background: rgba(0, 115, 221, 0.3);
+    border: 1px solid #0073dd;
+    letter-spacing: 1px;
+  }
+
+  .no-data {
+    font-size: 0.875rem;
+    line-height: 3rem;
+    text-align: center;
+  }
+}
+
+@font-face {
+  font-family: logo;
+  src: url(../font/pangmenzhengdao.ttf);
+}
+
+@font-face {
+  font-family: type-title;
+  src: url(../font/zhengruiheiti.ttf);
+}
+
+@font-face {
+  font-family: number;
+  src: url(../font/din-bold.otf);
+}
+
+@font-face {
+  font-family: number-light;
+  src: url(../font/din-light.otf);
+}
+
+@font-face {
+  font-family: map-font;
+  src: url(../font/youshebiaotihei.ttf);
+}

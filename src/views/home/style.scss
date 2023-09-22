@@ -1,0 +1,87 @@
+    .home {
+      .screen-wrap {
+        background-image: url(../../assets/images/index-bodybg.png);
+
+        .head-bar {
+          width: 100%;
+          height: 5.9375rem;
+          line-height: 5.9375rem;
+          text-align: center;
+          color: #fff;
+          font-size: 2.5rem;
+          font-family: logo;
+          background-image: url(../../assets/images/index-headbg.png);
+          background-repeat: no-repeat;
+
+          span {
+            letter-spacing: 3px;
+            background: linear-gradient(180deg, #fff 0%, #f5fdff 28%, #4fefff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+        }
+
+        .menu {
+          padding-top: 15rem;
+
+          .item {
+            margin: 0 1.625rem;
+            width: 26.875rem;
+            height: 23.9375rem;
+            background-image: url(../../assets/images/index-itembg.png);
+            background-repeat: no-repeat;
+            cursor: pointer;
+
+            .name {
+              font-size: 1.75rem;
+              font-family: number;
+              background: linear-gradient(180deg, #fff 0%, #f5fdff 28%, #4fefff 100%);
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+            }
+
+            &:first-child {
+              .name {
+                background: linear-gradient(270deg, #00ffff 0%, #0e5fff 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+              }
+            }
+
+            &:hover {
+              img {
+                animation: up 1s ease-in-out;
+              }
+            }
+
+            @keyframes up {
+              0% {
+                transform: translateY(0);
+              }
+
+              50% {
+                transform: translateY(-10px);
+              }
+
+              100% {
+                transform: translateY(0);
+              }
+            }
+
+            @-webkit-keyframes up {
+              0% {
+                transform: translateY(0);
+              }
+
+              50% {
+                transform: translateY(-10px);
+              }
+
+              100% {
+                transform: translateY(0);
+              }
+            }
+          }
+        }
+      }
+    }
